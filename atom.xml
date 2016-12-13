@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title><![CDATA[于曦昕/Xixin Yu's Blog]]></title>
+  
+  <link href="/atom.xml" rel="self"/>
+  <link href="/"/>
+  <updated>2016-12-13T09:57:29.000Z</updated>
+  <id>/</id>
+  
+  <author>
+    <name><![CDATA[Xixin Yu]]></name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[About]]></title>
+    <link href="/2016/12/12/hello-world/"/>
+    <id>/2016/12/12/hello-world/</id>
+    <published>2016-12-11T16:00:00.000Z</published>
+    <updated>2016-12-13T09:57:29.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to my personal technical blog!</p>
+<p>This blog will mainly record my thoughts about computer science.</p>
+<p>Any comment is welcomed, however you need to register a <a href="https://disqus.com" target="_blank" rel="external">Disqus</a> account to comment.</p>
+<p>Please contact me by sending an email to <a href="mailto:yuxixin911@gmail.com" target="_blank" rel="external">yuxixin911@gmail.com</a>.</p>
+<p>RSS is available and please subscribe if you are interested.</p>
+<p>Currently in Changchun, China.</p>
+<hr>
+<p>于曦昕/Xixin Yu<br>Computer Science Dept.<br>University of Bristol</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>Welcome to my personal technical blog!</p>
+<p>This blog will mainly record my thoughts about computer science.</p>
+<p>Any comment is welc]]>
+    </summary>
+    
+      <category term="AboutMe" scheme="/tags/AboutMe/"/>
+    
+      <category term="ContactInfo" scheme="/tags/ContactInfo/"/>
+    
+      <category term="AboutMe" scheme="/categories/AboutMe/"/>
+    
+  </entry>
+  
+</feed>
