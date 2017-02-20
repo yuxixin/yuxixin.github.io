@@ -4,7 +4,7 @@
   
   <link href="/atom.xml" rel="self"/>
   <link href="/"/>
-  <updated>2016-12-13T09:57:29.000Z</updated>
+  <updated>2017-01-09T05:38:47.000Z</updated>
   <id>/</id>
   
   <author>
@@ -19,11 +19,11 @@
     <link href="/2016/12/12/hello-world/"/>
     <id>/2016/12/12/hello-world/</id>
     <published>2016-12-11T16:00:00.000Z</published>
-    <updated>2016-12-13T09:57:29.000Z</updated>
+    <updated>2017-01-09T05:38:47.000Z</updated>
     <content type="html"><![CDATA[<p>Welcome to my personal technical blog!</p>
 <p>This blog will mainly record my thoughts about computer science.</p>
 <p>Any comment is welcomed, however you need to register a <a href="https://disqus.com" target="_blank" rel="external">Disqus</a> account to comment.</p>
-<p>Please contact me by sending an email to <a href="mailto:yuxixin911@gmail.com" target="_blank" rel="external">yuxixin911@gmail.com</a>.</p>
+<p>Please contact me by sending an email to <a href="mailto:yuxixin@outlook.com" target="_blank" rel="external">yuxixin@outlook.com</a>.</p>
 <p>RSS is available and please subscribe if you are interested.</p>
 <p>Currently in Changchun, China.</p>
 <hr>

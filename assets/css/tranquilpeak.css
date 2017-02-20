@@ -204,7 +204,7 @@ blockquote {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(51, 105, 232, 1);
+  background: rgba(26, 45, 64, 1);
   /*background: rgba(17, 26, 35, 0.2);*/
   text-align: center;
   line-height: 100%;
@@ -400,7 +400,7 @@ blockquote {
   height: 100%;
   position: fixed;
   top: 0;
-  background: rgba(51, 105, 232, 1);
+  background: rgba(26, 45, 64, 1);
   /*background: rgba(17, 26, 35, 0.2);*/
   overflow: auto;
   z-index: 20;
