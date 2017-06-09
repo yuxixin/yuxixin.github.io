@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2017-06-09T05:57:16.000Z</updated>
+  <updated>2017-06-09T06:12:12.000Z</updated>
   <id>/</id>
   
   <author>
@@ -20,21 +20,17 @@
     <link href="/2017/06/09/setup/"/>
     <id>/2017/06/09/setup/</id>
     <published>2017-06-08T16:00:00.000Z</published>
-    <updated>2017-06-09T05:57:16.000Z</updated>
+    <updated>2017-06-09T06:12:12.000Z</updated>
     
-    <content type="html"><![CDATA[<p>无论怎么样也要先晒一波装备吧~</p>
+    <content type="html"><![CDATA[<figure class="highlight yaml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="string">无论怎么样也要先晒一波装备吧~</span></div><div class="line"></div><div class="line"><span class="attr">CPU:</span>		<span class="string">i7</span> <span class="number">6700</span><span class="string">k</span></div><div class="line"><span class="attr">GPU:</span>		<span class="string">GTX1080</span></div><div class="line"><span class="attr">Screen:</span>		<span class="string">Dell</span> <span class="number">2715</span><span class="string">H</span></div><div class="line"><span class="attr">Keyboard:</span>	<span class="string">Filco</span> <span class="string">Majestouch</span> <span class="string">Convertible</span> <span class="number">2</span></div><div class="line"><span class="attr">Keycaps:</span>	<span class="string">WASD</span> <span class="string">Custom</span> <span class="string">Keycaps</span></div><div class="line"><span class="attr">Mouse:</span>		<span class="string">MX</span> <span class="string">Master</span> <span class="number">2</span></div></pre></td></tr></table></figure>
 <p><img src="IMG_2606.jpg" alt="P1"></p>
 <p><img src="IMG_4247.jpg" alt="P1"></p>
 <p><img src="IMG_2694.jpg" alt="P1"></p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">CPU:		i7 6700k</div><div class="line">GPU:		GTX1080</div><div class="line">Screen:		Dell 2715H</div><div class="line">Keyboard:	Filco Majestouch Convertible 2</div><div class="line">Keycaps:	WASD Custom Keycaps</div><div class="line">Mouse:		MX Master 2</div></pre></td></tr></table></figure>
 ]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;无论怎么样也要先晒一波装备吧~&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;IMG_2606.jpg&quot; alt=&quot;P1&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;IMG_4247.jpg&quot; alt=&quot;P1&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;IMG_2694.jpg&quot; alt=&quot;P1&quot;
+      &lt;figure class=&quot;highlight yaml&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div
     
     </summary>
     
