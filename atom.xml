@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2017-06-09T06:50:13.000Z</updated>
+  <updated>2017-06-20T02:39:04.000Z</updated>
   <id>/</id>
   
   <author>
@@ -14,6 +14,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>What is &quot;overfitting&quot;? 什么是“过拟合”？</title>
+    <link href="/2017/06/20/overfit/"/>
+    <id>/2017/06/20/overfit/</id>
+    <published>2017-06-20T01:46:09.000Z</published>
+    <updated>2017-06-20T02:39:04.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>This post contains multiple complex mathematic expressions, which you can skip safely.</p>
+<p>本文包含了一些复杂的数学公式，在阅读时选择跳过。</p>
+<p>In machine learning, our purpose is either prediciton or clustering. We focus on an important concept in prediction here – overfitting.</p>
+<p>First let’s discuss what is prediction in mathematics. Given a set of training data $x$ and corresponding value $t$, by constructing a model with a set of parameters $S$, predict the value of $t’$ given $x’$.</p>
+<p>Put it in a simple way, for example, if we knew the price of estate in Shanghai is 11000/m<sup>2</sup> in January, 12000/m<sup>2</sup> in February, and 13000/m<sup>2</sup> in March. We can easily estimate the price in April is 14000/m<sup>2</sup>. Although you may not notice the model here is the price $p=m*1000+10000$</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;This post contains multiple complex mathematic expressions, which you can skip safely.&lt;/p&gt;
+&lt;p&gt;本文包含了一些复杂的数学公式，在阅读时选择跳过。&lt;/p&gt;
+&lt;p&gt;In machine 
+    
+    </summary>
+    
+      <category term="MachineLearning" scheme="/categories/MachineLearning/"/>
+    
+      <category term="Concept" scheme="/categories/MachineLearning/Concept/"/>
+    
+    
+      <category term="MachineLearning" scheme="/tags/MachineLearning/"/>
+    
+      <category term="Concept" scheme="/tags/Concept/"/>
+    
+  </entry>
   
   <entry>
     <title>Setup</title>
