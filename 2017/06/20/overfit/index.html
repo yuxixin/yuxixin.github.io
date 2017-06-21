@@ -5,7 +5,7 @@
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta http-equiv="Content-Type" content="text/html" charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="于曦昕/Xixin Yu&#39;s Blog">
-    <title>What is &quot;overfitting&quot;? 什么是“过拟合”？ - 于曦昕/Xixin Yu&#39;s Blog</title>
+    <title>What is &quot;overfitting&quot;? / 什么是“过拟合”？ - 于曦昕/Xixin Yu&#39;s Blog</title>
     <meta name="author" content="Xixin Yu／于曦昕">
     <meta name="description" content="于曦昕/Xixin Yu&#39;s Blog">
     <link rel="icon" href="/assets/images/a.jpg">
@@ -146,7 +146,7 @@
     
         <div class="post-header main-content-wrap">
     
-        <h1 class="post-title" itemprop="headline">What is &quot;overfitting&quot;? 什么是“过拟合”？</h1>
+        <h1 class="post-title" itemprop="headline">What is &quot;overfitting&quot;? / 什么是“过拟合”？</h1>
     
     <div class="post-meta">
     <time  itemprop="datePublished" content="Tue Jun 20 2017 09:46:09 GMT+0800">
@@ -155,7 +155,7 @@
     
         <span>in </span>
         
-    <a class="category-link" href="/categories/MachineLearning/">MachineLearning</a>, <a class="category-link" href="/categories/MachineLearning/Concept/">Concept</a>
+    <a class="category-link" href="/categories/Machine-Learning/">Machine Learning</a>
 
 
     
@@ -163,11 +163,35 @@
 </div>
     
     <div class="post-content markdown main-content-wrap" itemprop="articleBody">
-        <p>This post contains multiple complex mathematic expressions, which you can skip safely.</p>
-<p>本文包含了一些复杂的数学公式，在阅读时选择跳过。</p>
-<p>In machine learning, our purpose is either prediciton or clustering. We focus on an important concept in prediction here – overfitting.</p>
+        <p><center><img src="star.png" alt="star"></center><br></p>
+<h2 id="From-Zero-从〇开始"><a href="#From-Zero-从〇开始" class="headerlink" title="From Zero 从〇开始"></a>From Zero 从〇开始</h2><p>In machine learning, our purpose is either prediciton or clustering. We focus on an important concept in prediction here – overfitting.</p>
 <p>First let’s discuss what is prediction in mathematics. Given a set of training data $x$ and corresponding value $t$, by constructing a model with a set of parameters $S$, predict the value of $t’$ given $x’$.</p>
-<p>Put it in a simple way, for example, if we knew the price of estate in Shanghai is 11000/m<sup>2</sup> in January, 12000/m<sup>2</sup> in February, and 13000/m<sup>2</sup> in March. We can easily estimate the price in April is 14000/m<sup>2</sup>. Although you may not notice the model here is the price $p=m*1000+10000$</p>
+<p>Put it in a simple way, for example, if we knew the price of estate in Shanghai is 11000/m<sup>2</sup> in January, 12000/m<sup>2</sup> in February, and 13000/m<sup>2</sup> in March. We can easily estimate the price in April is 14000/m<sup>2</sup>. Although you may not notice the model here is the price $y=x*1000+10000$, where $x$ is the number of month since January.</p>
+<p><center><img src="price_of_estate.png" alt="priceofestate"></center></p>
+<p><center>$Figure\ 1,price\ of\ estate$</center><br><br><br>The red line in $Figure\ 1$ is a trendline we need to fit with current data, or training data in machine learning terminology. This line shows the trend of current data. The example above is a very basic linear regression with degree $d=1$. There are also other prediction models such as decision tree, gradient boosting and so on. Here we focus on the concept of overfit instead of prediction algorithm itself, although overfitting occurs in other algorithms as well.</p>
+<p>However, real world estimation is not always simple like this. What if we have complex data in $Figure\ 2$:</p>
+<p><center><img src="complex_data.png" alt="complex"></center></p>
+<p><center>$Figure\ 2, training\ data$</center><br><br><br>Apparently, a straight line in the form of $y=ax+b$ (where degree $d=1$) wouldn’t fit the data, or cannot show the trend of the data ($Figure\ 3$):</p>
+<p><center><img src="d1.png" alt="d1"></center></p>
+<p><center>$Figure\ 3, d=1$</center><br><br><br>The condition in $Figure\ 3$ is called “underfitting”. <strong>Underfitting occurs when a statistical model or machine learning algorithm cannot capture the underlying trend of the data. Underfitting would occur, for example, when fitting a linear model to non-linear data. Such a model would have poor predictive performance.</strong> $^{[1]}$</p>
+<p>If we increase the degree of the model to $d=2$, i.e., in the form of $y=ax^2+bx+c$, then we have:</p>
+<p><center><img src="d2.png" alt="d2"></center></p>
+<p><center>$Figure\ 4, d=2$</center><br><br><br>As we can see, the trendline just fits roughly in $Figure\ 4$, but not across every point. Does it mean this fit is terrible? Not necessarily. Let’s increase the degree $d=3$, and we have $Figure\ 5$, where the black curve is the new fit.</p>
+<p><center><img src="d2d3.png" alt="d2d3"></center></p>
+<p><center>$Figure\ 5,d=2\ and\ d=3$</center><br><br><br>Doesn’t change much, now we increase the degree to $d=6$, things getting interesting: </p>
+<p><center><img src="d6.png" alt="d6"></center></p>
+<p><center>$Figure\ 6, d=6$</center><br><br><br>This fit appears to getting closer to every single point, but this causes the fit goes down on two sides, and we know the general trend is not like this. This fit is trying too hard to follow the existing data, so that it ignores the overall performance. </p>
+<p><strong>Overfitting occurs when a model is excessively complex, such as having too many parameters relative to the number of observations. A model that has been overfit has poor predictive performance, as it overreacts to minor fluctuations in the training data.</strong> $^{[2]}$</p>
+<p>If we were crazy and we needed the line to across all the points right in the middle, we set the degree $d=30$:</p>
+<p><center><img src="d30.png" alt="d3"></center></p>
+<p><center>$Figure\ 6,d=30$ </center><br><br><br>Now the fit in $Figure\ 6$ does not make any sense, it is so overfitting that does not have any meaning mathematically.</p>
+<p>Now we seem reach an agreement on which models are underfitting and overfitting, but as for the two fits in $Figure\ 5$, where $d=2\ and\ d=3$, we cannot just pick one by the judgement of our naked eyes, so normally we use the simpler one when several fits have comparable performance.</p>
+<p><center><img src="star_of.png" alt="star_of"></center><br><br><br>Now you get why I put a picture of constellations on the top!</p>
+<!--1953年春天，戴森和自己的学生利用赝标介子理论计算了介子与质子的散射截面，得到了与费米的实验观测值十分相符的结果。然而该理论需要4个自由参数，费米很不屑，讲了一句日后很著名的话：“我记得我的朋友约翰·冯·诺依曼（John von Neumann）曾经说过，用四个参数我可以拟合出一头大象，而用五个参数我可以让它的鼻子摆动。”
+
+有趣的是，2010年6月，尤根·迈尔（Jurgen Mayer）等三位德国分子生物学家在《美国物理学期刊》（American Journal of Physics）发表了题为“用四个复参数画出一头大象”的论文。他们发现，利用四个复参数可以大致勾勒出大象的形态，再引入一个复参数则可以让大象的鼻子摆动起来。
+-->
+<h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1][2]. <a href="https://en.wikipedia.org/wiki/Overfitting" target="_blank" rel="external">https://en.wikipedia.org/wiki/Overfitting</a></p>
 
         
             
@@ -178,7 +202,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">TAGGED IN</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/Concept/">Concept</a> <a class="tag tag--primary tag--small t-link" href="/tags/MachineLearning/">MachineLearning</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/concept/">concept</a> <a class="tag tag--primary tag--small t-link" href="/tags/overfitting/">overfitting</a>
 
             </div>
         
