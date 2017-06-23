@@ -163,34 +163,39 @@
 </div>
     
     <div class="post-content markdown main-content-wrap" itemprop="articleBody">
-        <p><center><img src="star.png" alt="star"></center><br></p>
-<h2 id="From-Zero-从〇开始"><a href="#From-Zero-从〇开始" class="headerlink" title="From Zero 从〇开始"></a>From Zero 从〇开始</h2><p>In machine learning, our purpose is either prediciton or clustering. We focus on an important concept in prediction here – overfitting.</p>
-<p>First let’s discuss what is prediction in mathematics. Given a set of training data $x$ and corresponding value $t$, by constructing a model with a set of parameters $S$, predict the value of $t’$ given $x’$.</p>
-<p>Put it in a simple way, for example, if we knew the price of estate in Shanghai is 11000/m<sup>2</sup> in January, 12000/m<sup>2</sup> in February, and 13000/m<sup>2</sup> in March. We can easily estimate the price in April is 14000/m<sup>2</sup>. Although you may not notice the model here is the price $y=x*1000+10000$, where $x$ is the number of month since January.</p>
-<p><center><img src="price_of_estate.png" alt="priceofestate"></center></p>
-<p><center>$Figure\ 1,price\ of\ estate$</center><br><br><br>The red line in $Figure\ 1$ is a trendline we need to fit with current data, or training data in machine learning terminology. This line shows the trend of current data. The example above is a very basic linear regression with degree $d=1$. There are also other prediction models such as decision tree, gradient boosting and so on. Here we focus on the concept of overfit instead of prediction algorithm itself, although overfitting occurs in other algorithms as well.</p>
-<p>However, real world estimation is not always simple like this. What if we have complex data in $Figure\ 2$:</p>
-<p><center><img src="complex_data.png" alt="complex"></center></p>
-<p><center>$Figure\ 2, training\ data$</center><br><br><br>Apparently, a straight line in the form of $y=ax+b$ (where degree $d=1$) wouldn’t fit the data, or cannot show the trend of the data ($Figure\ 3$):</p>
-<p><center><img src="d1.png" alt="d1"></center></p>
-<p><center>$Figure\ 3, d=1$</center><br><br><br>The condition in $Figure\ 3$ is called “underfitting”. <strong>Underfitting occurs when a statistical model or machine learning algorithm cannot capture the underlying trend of the data. Underfitting would occur, for example, when fitting a linear model to non-linear data. Such a model would have poor predictive performance.</strong> $^{[1]}$</p>
-<p>If we increase the degree of the model to $d=2$, i.e., in the form of $y=ax^2+bx+c$, then we have:</p>
-<p><center><img src="d2.png" alt="d2"></center></p>
-<p><center>$Figure\ 4, d=2$</center><br><br><br>As we can see, the trendline just fits roughly in $Figure\ 4$, but not across every point. Does it mean this fit is terrible? Not necessarily. Let’s increase the degree $d=3$, and we have $Figure\ 5$, where the black curve is the new fit.</p>
-<p><center><img src="d2d3.png" alt="d2d3"></center></p>
-<p><center>$Figure\ 5,d=2\ and\ d=3$</center><br><br><br>Doesn’t change much, now we increase the degree to $d=6$, things getting interesting: </p>
-<p><center><img src="d6.png" alt="d6"></center></p>
-<p><center>$Figure\ 6, d=6$</center><br><br><br>This fit appears to getting closer to every single point, but this causes the fit goes down on two sides, and we know the general trend is not like this. This fit is trying too hard to follow the existing data, so that it ignores the overall performance. </p>
-<p><strong>Overfitting occurs when a model is excessively complex, such as having too many parameters relative to the number of observations. A model that has been overfit has poor predictive performance, as it overreacts to minor fluctuations in the training data.</strong> $^{[2]}$</p>
-<p>If we were crazy and we needed the line to across all the points right in the middle, we set the degree $d=30$:</p>
-<p><center><img src="d30.png" alt="d3"></center></p>
-<p><center>$Figure\ 6,d=30$ </center><br><br><br>Now the fit in $Figure\ 6$ does not make any sense, it is so overfitting that does not have any meaning mathematically.</p>
-<p>Now we seem reach an agreement on which models are underfitting and overfitting, but as for the two fits in $Figure\ 5$, where $d=2\ and\ d=3$, we cannot just pick one by the judgement of our naked eyes, so normally we use the simpler one when several fits have comparable performance.</p>
-<p><center><img src="star_of.png" alt="star_of"></center><br><br><br>Now you get why I put a picture of constellations on the top!</p>
-<!--1953年春天，戴森和自己的学生利用赝标介子理论计算了介子与质子的散射截面，得到了与费米的实验观测值十分相符的结果。然而该理论需要4个自由参数，费米很不屑，讲了一句日后很著名的话：“我记得我的朋友约翰·冯·诺依曼（John von Neumann）曾经说过，用四个参数我可以拟合出一头大象，而用五个参数我可以让它的鼻子摆动。”
+        <center><img src="star.png" alt="star"></center>  
 
-有趣的是，2010年6月，尤根·迈尔（Jurgen Mayer）等三位德国分子生物学家在《美国物理学期刊》（American Journal of Physics）发表了题为“用四个复参数画出一头大象”的论文。他们发现，利用四个复参数可以大致勾勒出大象的形态，再引入一个复参数则可以让大象的鼻子摆动起来。
--->
+<h2 id="From-Zero-／-从〇开始"><a href="#From-Zero-／-从〇开始" class="headerlink" title="From Zero ／ 从〇开始"></a>From Zero ／ 从〇开始</h2><p>In machine learning, our purpose is either prediciton or clustering. We focus on an important concept in prediction here – overfitting.<br>在机器学习中，我们的目标无非是预测和聚类两种。我们在这里介绍一个预测时常用到的基本概念——过拟合。</p>
+<p>First let’s discuss what is prediction in mathematics. Given a set of data $x$ and corresponding value $t$, by constructing a model with a set of parameters $S$, predict the value of $t’$ given $x’$.<br>我们先简单讨论一下一般预测的基本数学描述：给定一系列数据$x$和其对应值$t$，通过建立$x$与$t$的关于一系列参数$S$的关系模型，计算当新的数据$x’$出现时，与其对应的结果$t’$.</p>
+<p>Put it in a simple way, for example, if we knew the price of estate in Shanghai is 11000/m<sup>2</sup> in January, 12000/m<sup>2</sup> in February, and 13000/m<sup>2</sup> in March. We can easily estimate the price in April is 14000/m<sup>2</sup>. Although you may not notice the model here is the price $y=x<em>1000+10000$, where $x$ is the number of month since January.<br>举例子简单来说，当我们知道上海的房价在1月是11000/m<sup>2</sup>，二月是12000/m<sup>2</sup>，三月是13000/m<sup>2</sup>， 那我们可以简单预测四月基本就是14000/m<sup>2</sup>。虽然我们可能并没有察觉到这其中的模型为房价$y=x</em>1000+10000$，其中$x$为从1月开始的月份序号。</p>
+<p><center><img src="price.png" alt="priceofestate"></center></p>
+<p><center>$Figure\ 1,price\ of\ estate$</center><br>The red line in $Figure\ 1$ is a trendline we need to fit with current data, or training data in machine learning terminology. This line shows the trend of current data. The example above is a very basic linear regression with degree $d=1$. There are also other prediction models such as decision tree, gradient boosting and so on. Here we focus on the concept of overfit instead of prediction algorithm itself, although overfitting occurs in other algorithms as well.<br>$图1$中的红线就是当前数据的趋势线，这些数据在机器学习中我们叫它训练数据。这条线代表了当前数据的发展趋势。上图中是一个非常简单的线性回归拟合，也就是degree $d=1$ 的多项式回归。当然除了基本的多项式（线性）回归，还有其他更复杂的预测模型如决策树，梯度提升和现在大火的神经网络等等。虽然每种拟合方式都存在过拟合，但是我们现在的重点在过拟合的概念而不是这几种算法本身。</p>
+<p>However, real world estimations is not always simple like this. What if we have complex data in $Figure\ 2$:<br>现实中的数据并不总是如上一个例子那么简单，现在假设我们有这样一系列复杂数据如$图2$：</p>
+<p><center><img src="complex_data.png" alt="complex"></center></p>
+<p><center>$Figure\ 2, training\ data$</center><br>Apparently, a straight line in the form of $y=ax+b$ (where degree $d=1$) wouldn’t fit the data, or cannot show the trend of the data ($Figure\ 3$):<br>显然一条形如$y=ax+b$ (degree $d=1$) 的直线并不能展现数据的趋势。$图3$：</p>
+<p><center><img src="d1.png" alt="d1"></center></p>
+<p><center>$Figure\ 3, d=1$</center><br>The condition in $Figure\ 3$ is called “underfitting”.<br>这种情况被称为“欠拟合”。</p>
+<blockquote>
+<p>Underfitting occurs when a statistical model or machine learning algorithm cannot capture the underlying trend of the data. Underfitting would occur, for example, when fitting a linear model to non-linear data. Such a model would have poor predictive performance. $^{[1]}$<br>欠拟合是指在统计学或机器学习中，算法不能呈现数据的趋势。比如，如果数据是非线性的但是却用线性模型去拟合，欠拟合就会发生。这样的模型的预测性能很差。</p>
+</blockquote>
+<p>If we increase the degree of the model to $d=2$, i.e., in the form of $y=ax^2+bx+c$, then we have:<br>如果我们增加拟合参数的度到degree $d=2$，也就是说用形如$y=ax^2+bx+c$的模型去拟合这些数据，我们会得到：</p>
+<p><center><img src="d2.png" alt="d2"></center></p>
+<p><center>$Figure\ 4, d=2$</center><br>As we can see, the trendline just fits roughly in $Figure\ 4$, but not across every point. Does it mean this fit is terrible? Not necessarily. Let’s increase the degree $d=3$, and we have $Figure\ 5$, where the black curve is the new fit.<br>可以看见，这条趋势线基本拟合了数据，但是并不经过每个数据点。这样意味这个拟合失败了么？不尽然。现在我们把度设置为degree $d=3$，也就是说，加了一个拟合参数。我们会得到$图5$，其中黑色的是新的趋势线：</p>
+<p><center><img src="d2d3.png" alt="d2d3"></center></p>
+<p><center>$Figure\ 5,d=2\ and\ d=3$</center><br>Doesn’t change much, now we increase the degree to $d=6$, things getting interesting:<br>并没有太大进展。现在我们讲degree设置为$d=6$，有趣的现象出现了：</p>
+<p><center><img src="d6.png" alt="d6"></center></p>
+<p><center>$Figure\ 6, d=6$</center><br>This fit appears to getting closer to every single point, but this causes the fit goes down on two sides, and we know the general trend is not like this. This fit is trying too hard to follow the existing data, so that it ignores the overall performance.<br>这个拟合似乎更好的贴近了现有数据，但是两端却展现了下降的趋势，与整体趋势不符。这条趋势线过于追求符合当前数据，而忽视了整体表现。这就是过拟合了。</p>
+<blockquote>
+<p>Overfitting occurs when a model is excessively complex, such as having too many parameters relative to the number of observations. A model that has been overfit has poor predictive performance, as it overreacts to minor fluctuations in the training data. $^{[2]}$<br>当模型过于复杂，就会产生过拟合。比如数据呈现简单的趋势，拟合时却用了太多参数。过拟合同样有很差的预测性能，因为这样的模型太注重训练数据中局部的不重要的波动。</p>
+</blockquote>
+<p>If we were crazy and we needed the line to across all the points right in the middle, we set the degree $d=30$:<br>如果我们不能控制控制控控控控z``df£%gh*@#f@DSdsfds@£fds@(D制自己，希望我们的拟合穿过每个数据点，并把模型的复杂度增加到$d=30$，我们会看到：</p>
+<p><center><img src="d30.png" alt="d3"></center></p>
+<p><center>$Figure\ 6,d=30$ </center><br>Now the fit in $Figure\ 6$ does not make any sense, it is so overfitting that does not have any meaning mathematically.<br>$图6$中的拟合已经完全不讲道理，非常非常的过拟合以至于这条线已经不具备任何意义。</p>
+<p>Now we seem reach an agreement on which models are underfitting and overfitting, but as for the two fits in $Figure\ 5$, where $d=2\ and\ d=3$, we cannot just pick one by the judgement of our naked eyes, so normally we use the simpler one when several fits have comparable performance.<br>现在似乎对于明显的过拟合和欠拟合，我们已经达成共识。但是对于$图5$中的两条趋势线，我们更应该采用哪个呢？事实上，一般来讲，当我们不能分辨哪个拟合更好时，倾向于选择更参数简单的那个。</p>
+<p><center><img src="star_of.png" alt="star_of"></center><br>Now you get why I put a picture of constellations on the top!<br>现在你应该get到我为什么放了一个星座图在最上面了。</p>
+<h2 id="Something-Interesting-关于拟合呵呵呵"><a href="#Something-Interesting-关于拟合呵呵呵" class="headerlink" title="Something Interesting / 关于拟合呵呵呵"></a>Something Interesting / 关于拟合呵呵呵</h2><p>Spring 1933, Dyson and his students calculated the scattering cross section proton and meson with Pseudo Meson Theory, obtained a similar result with Fermi experiment. But this theory needs 4 complex parameters, Fermi was very dismissive of it and said: “I remember that my friend John von Neumann said, with 4 parameters I can fit an elephant, and make its nose swing with 5.”<br>1953年春天，戴森和自己的学生利用赝标介子理论计算了介子与质子的散射截面，得到了与费米的实验观测值十分相符的结果。然而该理论需要4个自由参数，费米很不屑，讲了一句日后很著名的话：“我记得我的朋友约翰·冯·诺依曼（John von Neumann）曾经说过，用四个参数我可以拟合出一头大象，而用五个参数我可以让它的鼻子摆动。”</p>
+<p>June 2010, Jurgen Mayer and two other molecular biologists published an paper called “Drawing an elephant with four complex parameters” on American Journal of Physics. They found that they can fit an elephant roughly with 4 parameters and make its nose swing with another complex parameter.<br>有趣的是，2010年6月，尤根·迈尔（Jurgen Mayer）等三位德国分子生物学家在《美国物理学期刊》（American Journal of Physics）发表了题为“用四个复参数画出一头大象”的论文。他们发现，利用四个复参数可以大致勾勒出大象的形态，再引入一个复参数则可以让大象的鼻子摆动起来。</p>
+<p>The paper can be found here／论文地址：<br><a href="https://publications.mpi-cbg.de/getDocument.html?id=ff8080812daff75c012dc1b7bc10000c" target="_blank" rel="external">https://publications.mpi-cbg.de/getDocument.html?id=ff8080812daff75c012dc1b7bc10000c</a></p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1][2]. <a href="https://en.wikipedia.org/wiki/Overfitting" target="_blank" rel="external">https://en.wikipedia.org/wiki/Overfitting</a></p>
 
         
