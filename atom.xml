@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2017-06-23T01:33:58.000Z</updated>
+  <updated>2017-06-23T01:36:41.000Z</updated>
   <id>/</id>
   
   <author>
@@ -17,10 +17,10 @@
   
   <entry>
     <title>What is &quot;overfitting&quot;? / 什么是“过拟合”？</title>
-    <link href="/2017/06/20/overfit/"/>
-    <id>/2017/06/20/overfit/</id>
+    <link href="/2017/06/20/what-is-overfitting/"/>
+    <id>/2017/06/20/what-is-overfitting/</id>
     <published>2017-06-20T01:46:09.000Z</published>
-    <updated>2017-06-23T01:33:58.000Z</updated>
+    <updated>2017-06-23T01:36:41.000Z</updated>
     
     <content type="html"><![CDATA[<center><img src="star.png" alt="star"></center>  
 
@@ -56,6 +56,7 @@
 <p>June 2010, Jurgen Mayer and two other molecular biologists published an paper called “Drawing an elephant with four complex parameters” on American Journal of Physics. They found that they can fit an elephant roughly with 4 parameters and make its nose swing with another complex parameter.<br>有趣的是，2010年6月，尤根·迈尔（Jurgen Mayer）等三位德国分子生物学家在《美国物理学期刊》（American Journal of Physics）发表了题为“用四个复参数画出一头大象”的论文。他们发现，利用四个复参数可以大致勾勒出大象的形态，再引入一个复参数则可以让大象的鼻子摆动起来。</p>
 <p>The paper can be found here／论文地址：<br><a href="https://publications.mpi-cbg.de/getDocument.html?id=ff8080812daff75c012dc1b7bc10000c" target="_blank" rel="external">https://publications.mpi-cbg.de/getDocument.html?id=ff8080812daff75c012dc1b7bc10000c</a></p>
 <h2 id="Reference"><a href="#Reference" class="headerlink" title="Reference"></a>Reference</h2><p>[1][2]. <a href="https://en.wikipedia.org/wiki/Overfitting" target="_blank" rel="external">https://en.wikipedia.org/wiki/Overfitting</a></p>
+<h2 id="Notice-往这看"><a href="#Notice-往这看" class="headerlink" title="Notice / 往这看"></a>Notice / 往这看</h2><p>原创文章，转载请注明：<br>地址：<a href="https://yuxixin.com" target="_blank" rel="external">https://yuxixin.com</a><br>作者：Xixin Yu ／ 于曦昕</p>
 ]]></content>
     
     <summary type="html">
